@@ -32,9 +32,16 @@ public class Movement : MonoBehaviour
 
     void ProcessRotation()
     {
-        if(Input.GetKey(KeyCode.A))
-            transform.Rotate(Vector3.forward * Time.deltaTime * rotationThrust);
-        else if(Input.GetKey(KeyCode.D))
-            transform.Rotate(Vector3.back * Time.deltaTime * rotationThrust);
+        if (Input.GetKey(KeyCode.A))
+            ApplyRotation(rotationThrust);
+        else if (Input.GetKey(KeyCode.D))
+            ApplyRotation(-rotationThrust);
+    }
+
+    void ApplyRotation(float rotationThisFrame)
+    {
+        rb.freezeRotation = true;
+        transform.Rotate(Vector3.forward * rotationThisFrame * Time.deltaTime);
+        rb.freezeRotation = false;
     }
 }
