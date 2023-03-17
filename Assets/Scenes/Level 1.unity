@@ -365,10 +365,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 71731490, guid: b5cafeacbd843574ab2fa62ecb0d5681, type: 3}
-      propertyPath: delay
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1727348543533469803, guid: b5cafeacbd843574ab2fa62ecb0d5681, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -379,7 +375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1727348543533469803, guid: b5cafeacbd843574ab2fa62ecb0d5681, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.0999999
+      value: 1.43
       objectReference: {fileID: 0}
     - target: {fileID: 1727348543533469803, guid: b5cafeacbd843574ab2fa62ecb0d5681, type: 3}
       propertyPath: m_LocalPosition.z
@@ -416,14 +412,6 @@ PrefabInstance:
     - target: {fileID: 1727348543533469807, guid: b5cafeacbd843574ab2fa62ecb0d5681, type: 3}
       propertyPath: m_Name
       value: Rocket
-      objectReference: {fileID: 0}
-    - target: {fileID: 1946227785932789586, guid: b5cafeacbd843574ab2fa62ecb0d5681, type: 3}
-      propertyPath: Loop
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1946227785932789586, guid: b5cafeacbd843574ab2fa62ecb0d5681, type: 3}
-      propertyPath: m_PlayOnAwake
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5cafeacbd843574ab2fa62ecb0d5681, type: 3}
