@@ -12,6 +12,7 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] ParticleSystem successfulLandingParticles;
     
     AudioSource audioSource;
+  
     
 
     bool isTransitioning = false;
@@ -20,6 +21,7 @@ public class CollisionHandler : MonoBehaviour
     void Start() 
     {
         audioSource = GetComponent<AudioSource>();   
+        
     }
 
     void Update()
@@ -45,8 +47,9 @@ public class CollisionHandler : MonoBehaviour
                 Debug.Log("This object is friendly.");
                 break;
             case "Fuel":
+                StartFuelSequence(other);
                 Debug.Log("Fuel++");
-                break;
+                break; 
             case "Finish":
                 StartSuccessSequence();
                 Debug.Log("Level Complete!");
@@ -56,6 +59,14 @@ public class CollisionHandler : MonoBehaviour
                 break;
         }
 
+    }
+
+    void StartFuelSequence(Collision other)
+    {
+        
+        other.gameObject.GetComponent<SphereCollider>().enabled = false;
+        other.gameObject.GetComponent<MeshRenderer>().enabled = false;
+        
     }
 
     void StartCrashSequence()
